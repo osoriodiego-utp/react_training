@@ -14,7 +14,6 @@ export default function Contador() {
   return (
     // se puede usar <Fragment></Fragment>
     <div className="section">
-      <hr></hr>
       <p>Component: {title}</p>
       <p>Has dado click {count} veces</p>
       <button onClick={aumentar}>Aumentar</button>
@@ -23,7 +22,6 @@ export default function Contador() {
         setCount(count + 1)}}>
         Click me
       </button> */}
-      <hr></hr>
     </div>
   );
 }

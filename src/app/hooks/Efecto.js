@@ -1,17 +1,16 @@
-import "./SinNombre.css";
+import "./Hooks.css";
 import React, { useEffect, useState } from "react";
 // importar {useEffect} => React.useEffect
 
 
 
-function SinNombre() {
+function Efecto() {
   const [title, setTitle] = useState("no changed");
-
-  var letras = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u"];
+  const letras = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u"];
 
   function getRandomWords() {
-    var n = Math.floor(Math.random() * (2)) + 4;
-    var word = "";
+    let n = Math.floor(Math.random() * (2)) + 4;
+    let word = "";
     for (let i = 0; i < n; i++) {
       word += letras[Math.floor(Math.random() * letras.length)];
     }
@@ -20,7 +19,7 @@ function SinNombre() {
 
   useEffect(() => {
     document.title = `${title}`;
-  });
+  }, [title]);
 
   return (
     <div>
@@ -30,4 +29,4 @@ function SinNombre() {
   );
 }
 
-export default SinNombre;
+export default Efecto;

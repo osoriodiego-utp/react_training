@@ -1,15 +1,20 @@
-import React from "react";
-import "./App.css";
+import React, { Fragment } from "react";
+
 import Contador from "./contador/Contador";
 import SinNombre from "./useEffect/SinNombre";
+import Navbar from "./navbar/Navbar";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hola React</h1>
-      <Contador />
-      <SinNombre />
-    </div>
+    <Fragment>
+      <Navbar />
+      {/* <div className="App">
+        <h1>Hola React</h1>
+        <Contador />
+        <SinNombre />
+      </div> */}
+    </Fragment>
   );
 }
 

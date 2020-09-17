@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Contador.css";
+import "./Hooks.css";
 
 export default function Contador() {
   const title = "Contador";

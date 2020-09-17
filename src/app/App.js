@@ -1,7 +1,5 @@
 import React, { Fragment } from "react";
 
-import Contador from "./contador/Contador";
-import SinNombre from "./useEffect/SinNombre";
 import Navbar from "./navbar/Navbar";
 import "./App.css";
 

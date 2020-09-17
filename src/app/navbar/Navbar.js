@@ -1,31 +1,52 @@
-import React, { useEffect, useState, Fragment } from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import React, { Fragment } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  //   Link,
+  NavLink,
+} from "react-router-dom";
 
 import "./Navbar.css";
 import Home from "../home/Home";
 import Efecto from "../hooks/Efecto";
 import Estado from "../hooks/Estado";
+import Civilizaciones from "../router/Civilizaciones";
 
 function Navbar() {
   return (
     <Fragment>
       <Router>
         <div className="topnav">
-          <Link className="active" to="/">
-            Inicio
-          </Link>
-          <Link to="/HookEffect">Hooks</Link>
-          <Link to="/HookState">Hooks</Link>
-          <Link to="/HookEffect">Redux</Link>
-          <Link to="/HookEffect">Router</Link>
-          <Link to="/HookEffect">Axios</Link>
-          <Link to="/HookEffect">Syles</Link>
+          {/* <Link to="/">Inicio</Link> */}
+          <NavLink to="/">Inicio</NavLink>
+          <NavLink to="/Hooks">Hooks</NavLink>
+          <NavLink to="/Redux">Redux</NavLink>
+          <NavLink to="/Router">Router</NavLink>
+          <NavLink to="/Axios">Axios</NavLink>
+          <NavLink to="/Styles">Styles</NavLink>
         </div>
 
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/HookState" component={Estado} />
-          <Route exact path="/HookEffect" component={Efecto} />
+          <Route exact path="/Hooks">
+            <h1>Hook de Estado</h1>
+            <Estado />
+            <hr></hr>
+            <h1>Hook de Efecto</h1>
+            <Efecto />
+          </Route>
+          <Route exact component={Civilizaciones}>
+          </Route>
+          <Route exact path="/Redux">
+            <h1>Redux</h1>
+          </Route>
+          <Route exact path="/Axios">
+            <h1>Axios</h1>
+          </Route>
+          <Route exact path="/Styles">
+            <h1>Styles</h1>
+          </Route>
         </Switch>
       </Router>
     </Fragment>

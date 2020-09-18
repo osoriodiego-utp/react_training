@@ -12,7 +12,7 @@ import Home from "../home/Home";
 import Efecto from "../hooks/Efecto";
 import Estado from "../hooks/Estado";
 import Civilizaciones from "../router/Civilizaciones";
-import Reduxample from "../redux/Reduxample";
+import Example from "../redux/example";
 
 function Navbar() {
   return (
@@ -38,7 +38,7 @@ function Navbar() {
             <Efecto />
           </Route>
           <Route path="/Router" component={Civilizaciones}></Route>
-          <Route path="/Redux" component={Reduxample}></Route>
+          <Route path="/Redux" component={Example}></Route>
           <Route path="/Axios">
             <h1>Axios</h1>
           </Route>

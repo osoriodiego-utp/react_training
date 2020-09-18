@@ -6,10 +6,9 @@ import "./index.css";
 import App from "./app/App";
 
 import { Provider } from "react-redux";
-import storeFn from "./app/redux/store";
 
-const store = storeFn();
-console.log("Index/store: ", store);
+import storeConfiguration from './app/redux/storeConfiguration';
+const store = storeConfiguration()
 
 ReactDOM.render(
   <React.StrictMode>

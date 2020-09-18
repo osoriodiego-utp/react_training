@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Fragment } from "react";
 
 const Civilizaciones = () => {
-  const [usuarios, setUsuarios] = React.useState([]);
+  const [usuarios, setUsuarios] = useState([]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     fetchData();
   }, []);
 
@@ -19,7 +18,7 @@ const Civilizaciones = () => {
       <ul>
         {usuarios.map((item) => (
           <li key={item.id}>
-            {item.name}
+            {item.name} - {item.expansion}
           </li>
         ))}
       </ul>

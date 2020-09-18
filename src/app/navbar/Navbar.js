@@ -12,6 +12,7 @@ import Home from "../home/Home";
 import Efecto from "../hooks/Efecto";
 import Estado from "../hooks/Estado";
 import Civilizaciones from "../router/Civilizaciones";
+import Reduxample from "../redux/Reduxample";
 
 function Navbar() {
   return (
@@ -29,22 +30,19 @@ function Navbar() {
 
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/Hooks">
+          <Route path="/Hooks">
             <h1>Hook de Estado</h1>
             <Estado />
             <hr></hr>
             <h1>Hook de Efecto</h1>
             <Efecto />
           </Route>
-          <Route exact component={Civilizaciones}>
-          </Route>
-          <Route exact path="/Redux">
-            <h1>Redux</h1>
-          </Route>
-          <Route exact path="/Axios">
+          <Route path="/Router" component={Civilizaciones}></Route>
+          <Route path="/Redux" component={Reduxample}></Route>
+          <Route path="/Axios">
             <h1>Axios</h1>
           </Route>
-          <Route exact path="/Styles">
+          <Route path="/Styles">
             <h1>Styles</h1>
           </Route>
         </Switch>

@@ -1,17 +1,23 @@
 import React, { Fragment } from "react";
 
+import { Provider, useSelector } from "react-redux";
+import storeFn from "./redux/store";
+
 import Navbar from "./navbar/Navbar";
 import "./App.css";
 
-function App() {
+const store = storeFn();
+
+function App(props) {
+  const data = useSelector(state => {
+    console.log("App/state: ", state);
+  });
+  console.log("App/props: ", props);
   return (
     <Fragment>
-      <Navbar />
-      {/* <div className="App">
-        <h1>Hola React</h1>
-        <Contador />
-        <SinNombre />
-      </div> */}
+      <Provider store={store}>
+        <Navbar />
+      </Provider>
     </Fragment>
   );
 }

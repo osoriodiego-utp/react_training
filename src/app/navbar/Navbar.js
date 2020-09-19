@@ -13,6 +13,7 @@ import Efecto from "../hooks/Efecto";
 import Estado from "../hooks/Estado";
 import Civilizaciones from "../router/Civilizaciones";
 import Example from "../redux/example";
+import Bulma from "../styles/bulma";
 
 function Navbar() {
   return (
@@ -42,8 +43,7 @@ function Navbar() {
           <Route path="/Axios">
             <h1>Axios</h1>
           </Route>
-          <Route path="/Styles">
-            <h1>Styles</h1>
+          <Route path="/Styles" component={Bulma}>
           </Route>
         </Switch>
       </Router>
